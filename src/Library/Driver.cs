@@ -12,16 +12,6 @@ namespace Library
         {
             this.Vehicle = vehicle;
             this.Bio = bio;
-        }
-
-        public virtual void RatePassenger(Passenger passenger, int rate)
-        {
-            if (rate >= 1 && rate <= 5)
-            {
-                passenger.Rating = (passenger.Rating + rate) / 2;
-            }
-        }
-            
-
+        }   
     }
 }
