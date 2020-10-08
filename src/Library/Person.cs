@@ -15,7 +15,9 @@ namespace Library
         public int TrueRate {get; set;}
         public int Travels {get; set;}
 
-        public Person (string name, string surname, string CI)
+        public string Image {get; set; }
+
+        public Person (string name, string surname, string CI, string image)
         {
             this.Name = name;
             this.Surname = surname;
@@ -23,6 +25,7 @@ namespace Library
             this.Rating = 0;
             this.TrueRate = 0;
             this.Travels = 0;
+            this.Image = image;
         }
 
         /*

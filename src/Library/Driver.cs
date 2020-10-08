@@ -8,7 +8,8 @@ namespace Library
         public string Bio {get; set;}
         public string Vehicle {get; set;}
 
-        public Driver (string name, string surname, string CI, string bio, string vehicle) : base(name, surname, CI)
+        //le sume una imagen para poder hacer lo de las caras --- vale
+        public Driver (string name, string surname, string CI, string bio, string vehicle, string image) : base(name, surname, CI, image)
         {
             this.Vehicle = vehicle;
             this.Bio = bio;
