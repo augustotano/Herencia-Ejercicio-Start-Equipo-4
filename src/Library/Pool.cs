@@ -14,12 +14,12 @@ namespace Library
             this.MaxPassengers = maxPassengers;
         }
 
-        public override void RatePassenger(Passenger passenger, int rate)
+        //Revisa en base a la lista de pasajeros que obtiene de la futura clase viaje y los califica uno por uno con el mismo rate.
+        public void RateAllPassengers(int rate)
         {
-
-            if (rate >= 1 && rate <= 5)
+            foreach (var passenger in PassengerList)
             {
-                passenger.Rating = (passenger.Rating + rate) / 2;
+                passenger.ReceiveRate(rate);
             }
         }
 
