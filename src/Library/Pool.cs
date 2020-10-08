@@ -9,7 +9,7 @@ namespace Library
         protected int MaxPassengers {get; set;}
         protected Passenger[] PassengerList {get; set;}
 
-        public PoolDriver (string name, string surname, string CI, string bio, string vehicle, int maxPassengers) : base(name, surname, CI, bio, vehicle)
+        public PoolDriver (string name, string surname, string CI, string bio, string vehicle, int maxPassengers, string image) : base(name, surname, CI, bio, vehicle, image)
         {
             this.MaxPassengers = maxPassengers;
         }
