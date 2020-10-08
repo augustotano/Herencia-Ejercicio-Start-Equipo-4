@@ -34,10 +34,10 @@ namespace Library
             if (cog.FaceFound)
             {
                 Console.WriteLine("Face Found!");
+                sendTwitt.Send(passanger.Name, passanger.Image);
                 if (cog.SmileFound)
                 {
-                    Console.WriteLine("Found a Smile :)");
-                    sendTwitt.Send(passanger.Name, passanger.Image);
+                    Console.WriteLine("Found a Smile :)"); 
                 }
                 else
                 {
