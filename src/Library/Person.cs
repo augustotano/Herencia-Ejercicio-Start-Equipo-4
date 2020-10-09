@@ -7,6 +7,7 @@ namespace Library
         public string Name {get; set;}
         public string Surname {get; set;}
         public string CI {get; set;}
+        public string Bio {get; set;}
         public int Rating {get; set;}
         /*
         TrueRate representa la suma de todas las calificaciones, se utiliza para obtener un promedio en conjunto
@@ -14,18 +15,20 @@ namespace Library
         */
         public int TrueRate {get; set;}
         public int Travels {get; set;}
-
         public string Image {get; set; }
 
-        public Person (string name, string surname, string CI, string image)
+        public Person (string name, string surname, string CI, string bio, string image, CognitiveFace cog)
         {
             this.Name = name;
             this.Surname = surname;
             this.CI = CI;
+            this.Bio = bio;
             this.Rating = 0;
             this.TrueRate = 0;
             this.Travels = 0;
             this.Image = image;
+            cog.Recognize(image);
+            this.FoundFace(cog);
         }
 
         /*
@@ -39,7 +42,8 @@ namespace Library
                 this.TrueRate += rate;
                 this.Rating = (this.TrueRate) / this.Travels;
             }
-        } 
+        }
+        public abstract void FoundFace(CognitiveFace cog);
 
     }
 }
