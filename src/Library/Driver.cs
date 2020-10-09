@@ -6,11 +6,14 @@ namespace Library
     {
 
         public string Vehicle {get; set;}
+        public string Bio {get; set;}
 
         //le sume una imagen para poder hacer lo de las caras --- vale
-        public Driver (string name, string surname, string CI, string bio, string vehicle, string image, CognitiveFace cog) : base(name, surname, CI, bio, image, cog)
+        public Driver (string name, string surname, string CI, string bio, string vehicle, string image, CognitiveFace cog) : base(name, surname, CI, image, cog)
         {
+            this.Bio = bio;
             this.Vehicle = vehicle;
+            this.FoundFace(cog);
         }
 
         public override void FoundFace(CognitiveFace cog)
